@@ -27,9 +27,10 @@
  • [Polskie readme](https://github.com/textualize/rich/blob/master/README.pl.md)
  • [Tiếng Việt readme](https://github.com/textualize/rich/blob/master/README.vn.md)
 
+
 Rich là một thư viện Python dùng để hiển thị văn bản _giàu định dạng_ (rich text) và định dạng đẹp trong terminal.
 
-[Rich API](https://rich.readthedocs.io/en/latest/) giúp bạn dễ dàng thêm màu sắc và kiểu chữ cho đầu ra terminal. Rich có thể hiển thị bảng đẹp, thanh tiến trình, markdown, mã nguồn có tô sáng cú pháp, tracebacks và nhiều hơn nữa — tất cả đều có sẵn ngay sau khi cài đặt, không cần cấu hình gì thêm.
+[Rich API](https://rich.readthedocs.io/en/latest/) giúp bạn dễ dàng thêm màu sắc và kiểu chữ cho đầu ra của terminal. Rich có thể hiển thị bảng, thanh tiến trình, markdown, mã nguồn có tô sáng cú pháp, tracebacks (và nhiều hơn nữa) rất đẹp — tất cả đều có sẵn ngay sau khi cài đặt, không cần cấu hình gì thêm.
 
 ![Tính năng](https://github.com/textualize/rich/raw/master/imgs/features.png)
 
@@ -59,7 +60,7 @@ python -m rich
 
 ## Rich Print
 
-Để dễ dàng thêm rich output vào ứng dụng của bạn, bạn có thể import hàm [rich print](https://rich.readthedocs.io/en/latest/introduction.html#quick-start), hàm này có chữ ký giống với hàm `print` mặc định của Python. Hãy thử:
+Để dễ dàng thêm rich output vào ứng dụng của bạn, bạn có thể import hàm [rich print](https://rich.readthedocs.io/en/latest/introduction.html#quick-start), hàm này có signature giống với hàm `print` mặc định của Python. Hãy thử:
 
 ```python
 from rich import print
@@ -71,7 +72,7 @@ print("Hello, [bold magenta]World[/bold magenta]!", ":vampire:", locals())
 
 ## Rich REPL
 
-Rich có thể được cài đặt vào Python REPL, để mọi cấu trúc dữ liệu đều được pretty print và highlighted.
+Rich có thể được cài đặt vào Python REPL để mọi cấu trúc dữ liệu đều được pretty print và highlighted.
 
 ```python
 >>> from rich import pretty
@@ -116,11 +117,11 @@ console.print("Where there is a [bold cyan]Will[/bold cyan] there [u]is[/u] a [i
 
 ![Console Markup](https://github.com/textualize/rich/raw/master/imgs/where_there_is_a_will.png)
 
-Bạn có thể sử dụng đối tượng Console để tạo ra đầu ra tinh vi với rất ít công sức. Xem tài liệu [Console API](https://rich.readthedocs.io/en/latest/console.html) để biết chi tiết.
+Bạn có thể sử dụng đối tượng Console để tạo ra đầu ra tinh vi với rất ít công sức. Xem tài liệu [Console API](https://rich.readthedocs.io/en/latest/console.html) để biết thêm chi tiết.
 
 ## Rich Inspect
 
-Rich có một hàm [inspect](https://rich.readthedocs.io/en/latest/reference/init.html?highlight=inspect#rich.inspect) có thể tạo báo cáo về bất kỳ đối tượng Python nào, chẳng hạn như class, instance, hoặc built-in.
+Rich có một hàm [inspect](https://rich.readthedocs.io/en/latest/reference/init.html?highlight=inspect#rich.inspect) giúp tạo báo cáo về bất kỳ đối tượng Python nào, chẳng hạn như class, instance, hoặc built-in.
 
 ```python
 >>> my_list = ["foo", "bar"]
@@ -128,13 +129,13 @@ Rich có một hàm [inspect](https://rich.readthedocs.io/en/latest/reference/in
 >>> inspect(my_list, methods=True)
 ```
 
-![Inspect](https://github.com/textualize/rich/raw/master/imgs/inspect.png)
+![Log](https://github.com/textualize/rich/raw/master/imgs/inspect.png)
 
 Xem [tài liệu inspect](https://rich.readthedocs.io/en/latest/reference/init.html#rich.inspect) để biết chi tiết.
 
 # Thư viện Rich
 
-Rich chứa một số _renderable_ được xây dựng sẵn mà bạn có thể dùng để tạo ra đầu ra thanh lịch trong CLI và giúp gỡ lỗi code của mình.
+Rich chứa các _renderables_ built-in mà bạn có thể dùng để tạo ra đầu ra thanh lịch trong CLI và giúp gỡ lỗi code của mình.
 
 Nhấp vào các tiêu đề dưới đây để xem chi tiết:
 
@@ -170,9 +171,9 @@ test_log()
 
 ![Log](https://github.com/textualize/rich/raw/master/imgs/log.png)
 
-Lưu ý tham số `log_locals`, tham số này xuất ra một bảng chứa các biến cục bộ tại nơi phương thức log được gọi.
+Lưu ý: tham số `log_locals` xuất ra một bảng chứa các biến cục bộ tại nơi phương thức log được gọi.
 
-Phương thức log có thể dùng để ghi log ra terminal cho các ứng dụng chạy dài như máy chủ, nhưng cũng là một công cụ gỡ lỗi rất hữu ích.
+Phương thức log có thể dùng để ghi log ra terminal cho các ứng dụng chạy dài như máy chủ, nhưng cũng là một debugger rất hữu ích.
 
 </details>
 <details>
@@ -256,7 +257,7 @@ Lớp `Table` đủ thông minh để thay đổi kích thước cột cho phù 
 
 Rich có thể hiển thị nhiều [thanh tiến trình](https://rich.readthedocs.io/en/latest/progress.html) không nhấp nháy để theo dõi các tác vụ chạy dài.
 
-Đối với cách dùng cơ bản, hãy bọc bất kỳ một dãy nào trong hàm `track` và lặp qua kết quả. Ví dụ:
+Đối với tác vụ cơ bản, hãy bọc bất kỳ một dãy nào trong hàm `track` và lặp qua kết quả. Ví dụ:
 
 ```python
 from rich.progress import track
@@ -405,7 +406,7 @@ console = Console()
 console.print(syntax)
 ```
 
-Đoạn code trên tạo ra đầu ra sau:
+Đoạn code trên tạo ra đầu ra như sau:
 
 ![syntax](https://github.com/textualize/rich/raw/master/imgs/syntax.png)
 
@@ -428,11 +429,12 @@ Tất cả các renderable của Rich đều tận dụng [Giao thức Console](
 
 Xem thêm [Rich CLI](https://github.com/textualize/rich-cli) — một ứng dụng dòng lệnh được hỗ trợ bởi Rich. Tô sáng cú pháp code, hiển thị markdown, hiển thị CSV dưới dạng bảng, v.v., trực tiếp từ command prompt.
 
+
 ![Rich CLI](https://raw.githubusercontent.com/Textualize/rich-cli/main/imgs/rich-cli-splash.jpg)
 
 # Textual
 
-Xem thêm dự án chị em của Rich, [Textual](https://github.com/Textualize/textual), mà bạn có thể sử dụng để xây dựng các giao diện người dùng phức tạp trong terminal.
+Xem thêm dự án chị em của Rich, [Textual](https://github.com/Textualize/textual), bạn có thể sử dụng để xây dựng các giao diện người dùng phức tạp trong terminal.
 
 ![textual-splash](https://github.com/user-attachments/assets/4caeb77e-48c0-4cf7-b14d-c53ded855ffd)
 

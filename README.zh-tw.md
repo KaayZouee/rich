@@ -24,6 +24,7 @@
   • [فارسی readme](https://github.com/textualize/rich/blob/master/README.fa.md)
  • [Türkçe readme](https://github.com/textualize/rich/blob/master/README.tr.md)
  • [Polskie readme](https://github.com/textualize/rich/blob/master/README.pl.md)
+ • [Tiếng Việt readme](https://github.com/textualize/rich/blob/master/README.vn.md)
 
 Rich 是一款提供終端機介面中 _豐富的_ 文字效果及精美的格式設定的 Python 函式庫。
 
